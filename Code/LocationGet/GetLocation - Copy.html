@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click the button to get your coordinates.</p>
+
+<button onclick="getLocation()">Try It</button>
+
+<p id="demo"></p>
+
+<script>
+var x = document.getElementById("demo");
+function success(position) {
+    //retrieve lat and long
+    var latitude  = position.coords.latitude
+    var longitude = position.coords.longitude
+}
+
+function error(){
+    //error handling
+}
+
+setInterval(function(){
+  navigator.geolocation.getCurrentPosition(success, error);
+}, 3000);
+</script>
+
+</body>
+</html>

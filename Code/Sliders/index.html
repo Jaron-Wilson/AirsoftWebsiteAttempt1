@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,
+    initial-scale=1.0" />
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/modern-css-reset@1.3.0/dist/reset.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Im Stupid 🤔</title>
+    <script src="main.js"></script>
+  </head>
+  <body>
+
+
+  <div class="button1Location" style = "position:relative; top:60px;">
+     <!-- background-color:yellow;"> 690-->
+
+    <label class="toggle">
+      <span class="onoff"></span>
+      <input type="checkbox" onclick="myFunction()"/>
+      <span class="slider round"></span>
+    </label>
+
+    <p id="demo"></p>
+
+<script>
+var x = document.getElementById("demo");
+
+function getLocation(){
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+}
+
+function myFunction() {
+  setInterval(function(){ (getLocation()); }, 3000);
+}
+
+</script>
+  </div>
+
+  <div class="button2Location" style = "position:relative; top:635px;">
+     <!-- background-color:blue;"> 660-->
+
+
+    <label class="toggle">
+      <span class="onoff"></span>
+      <input type="checkbox" />
+      <span class="slider round"></span>
+    </label>
+  </div>
+
+
+</body>
+
+</html>

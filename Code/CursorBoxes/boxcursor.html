@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div {
+  width: 100px;
+  height: 200px;
+  border: 1px solid black;
+}
+</style>
+</head>
+<body>
+
+<div onmousemove="showCoords(event)" onmouseout="clearCoor()"></div>
+
+<p>Mouse over the rectangle above to get the horizontal and vertical coordinates of your mouse pointer.</p>
+
+<p id="demo"></p>
+
+<script>
+function showCoords(event) {
+  var x = event.clientX;
+  var y = event.clientY;
+  var coor = "X coords: " + x + ", Y coords: " + y;
+  document.getElementById("demo").innerHTML = coor;
+}
+
+function clearCoor() {
+  document.getElementById("demo").innerHTML = "";
+}
+</script>
+
+</body>
+</html>
